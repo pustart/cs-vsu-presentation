@@ -1,0 +1,73 @@
+@import 'fonts.css';
+
+.shower {
+    --slide-ratio: calc(16 / 9);
+
+    --color-key: #d83a3a;
+    --color-back: #d6d6d6;
+
+    font: 24px/2 'Evolventa', sans-serif;
+}
+
+.slide h2 {
+    color: inherit;
+}
+
+.caption h1 {
+    font: 100 1.17em/1 'Evolventa', sans-serif;
+}
+
+.title-slide {
+    background-color: var(--color-key);
+    color: white;
+    padding: 79px 0 0 var(--slide-left-side)
+}
+
+.two-column-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cs-circle {
+    display: flex;
+    width: 800px;
+    height: 800px;
+    margin: -290px;
+    justify-self: start;
+    align-self: center;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.cs-circle h2 {
+    margin-top: 36px;
+    margin-left: 286px;
+    text-align: left;
+    align-self: center;
+    font-size: 54px;
+    line-height: inherit;
+    /* color: black; */
+}
+
+.vsu-circle {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    justify-self: end;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--color-key);
+}
+
+.vsu-circle h2 {
+    margin: 0;
+    text-align: center;
+    align-self: center;
+    font-size: 27px;
+    line-height: inherit;
+}
+
+section {
+    line-height: 1.25;
+}
