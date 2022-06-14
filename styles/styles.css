@@ -26,14 +26,14 @@ section {
     font: 100 1.17em/1 'Evolventa', sans-serif;
 }
 
+.unnumbered::after {
+    content: "";
+}
+
 .title-slide {
     padding: 0 0 0 var(--slide-left-side);
     background-color: var(--color-key);
     color: white;
-}
-
-.title-slide::after {
-    display: none;
 }
 
 .title-column-grid {
