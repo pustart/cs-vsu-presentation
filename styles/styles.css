@@ -9,8 +9,17 @@
     font: 24px/2 'Evolventa', sans-serif;
 }
 
+section {
+    line-height: 1.25;
+}
+
 .slide h2 {
     color: inherit;
+}
+
+.slide a:hover {
+    margin: 0;
+    color: var(--color-light);
 }
 
 .caption h1 {
@@ -18,56 +27,81 @@
 }
 
 .title-slide {
+    padding: 0 0 0 var(--slide-left-side);
     background-color: var(--color-key);
     color: white;
-    padding: 79px 0 0 var(--slide-left-side)
 }
 
-.two-column-grid {
-    display: grid;
+.title-slide::after {
+    display: none;
+}
+
+.title-column-grid {
     width: 100%;
+    height: 100%;
+
+    display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
 }
 
-.cs-circle {
-    display: flex;
-    width: 800px;
-    height: 800px;
-    margin: -290px;
-    justify-self: start;
-    align-self: center;
-    border: 2px solid white;
-    border-radius: 50%;
+.title-column-grid ul {
+    margin: -10px 0 0 0;
+    color: white;
 }
 
-.cs-circle h2 {
-    margin-top: 36px;
-    margin-left: 286px;
-    text-align: left;
-    align-self: center;
-    font-size: 54px;
-    line-height: inherit;
-    /* color: black; */
+.title-column-grid ul li::before {
+    display: none;
+}
+
+.title-column-grid li a {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+}
+
+.cs-circle {
+    width: 894px;
+    height: 894px;
+
+    position: absolute;
+    left: -15%;
+    top: -25%;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.cs-title.cs-title {
+    height: auto;
+
+    margin-top: 30px;
+    line-height: 1.1;
+    font-size: 58px;
 }
 
 .vsu-circle {
+    width: 280px;
+    height: 280px;
+
     display: flex;
-    width: 400px;
-    height: 400px;
     justify-self: end;
+
     border-radius: 50%;
     background-color: white;
     color: var(--color-key);
 }
 
-.vsu-circle h2 {
+.vsu-circle h3 {
     margin: 0;
-    text-align: center;
     align-self: center;
-    font-size: 27px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
     line-height: inherit;
 }
 
-section {
-    line-height: 1.25;
+
+.title-list-header {
+    font-size: 44px;
 }
