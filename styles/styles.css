@@ -13,6 +13,10 @@ section {
     line-height: 1.25;
 }
 
+.slide {
+    padding: 79px var(--slide-right-side) 79px var(--slide-left-side);
+}
+
 .slide h2 {
     color: inherit;
 }
@@ -104,4 +108,46 @@ section {
 
 .title-list-header {
     font-size: 44px;
+}
+
+/* todo: вынести стили круга в общий класс */
+.big-circle {
+    width: 280px;
+    height: 280px;
+
+    position: absolute;
+    right: -15%;
+    top: 25%;
+
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: var(--color-key);
+}
+
+.double-rows-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.double-rows-wrapper h2 {
+    margin-top: 30px;
+}
+
+.cs-history {
+    color: var(--color-key);
+}
+
+.horizontal-separator {
+    width: 100%;
+    height: 1px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    background-color: var(--color-light);
 }
