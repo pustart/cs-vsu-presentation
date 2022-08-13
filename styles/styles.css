@@ -31,7 +31,31 @@ section {
 }
 
 .unnumbered::after {
-    content: "";
+    content: '';
+}
+
+.unmarked-list li::before {
+    display: none;
+}
+
+.pointed-list.pointed-list {
+    list-style-type: disc;
+}
+
+.double-columns-wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.double-columns-wrapper h2 {
+    width: 700px;
+
+    margin: auto 0;
+    font-size: 38px;
 }
 
 .title-slide {
@@ -64,15 +88,97 @@ section {
     color: white;
 }
 
+.circle {
+    border-radius: 50%;
+}
+
+.left-semicircle-title-decorating::before {
+    width: 25px;
+    height: 50px;
+
+    display: block;
+    position: absolute;
+    left: -60px;
+    content: '';
+
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: var(--color-key);
+}
+
+.top-semicircle-slide-decorating::before {
+    width: 120px;
+    height: 60px;
+
+    display: block;
+    position: absolute;
+    left: 456px;
+    top: 0;
+    content: '';
+
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+    background-color: var(--color-key);
+}
+
+.right-semicircle-decorated-list.right-semicircle-decorated-list.right-semicircle-decorated-list li::before {
+    width: 25px;
+    height: 50px;
+
+    display: block;
+    margin-top: -12px;
+    position: absolute;
+    content: '';
+
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: var(--color-key);
+}
+
+.grid-item {
+    height: 100%;
+
+    padding: 20px 20px;
+    text-align: center;
+
+    border-top: 1px solid var(--color-back);
+    border-left: 1px solid var(--color-back);
+}
+
+.grid-item h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: var(--color-key);
+}
+
+.grid-item p {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.grid-item::before {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    content: url(/images/notebook-icon.svg);
+}
+
 .cs-circle {
     width: 894px;
     height: 894px;
 
     position: absolute;
-    left: -15%;
-    top: -25%;
+    left: -153px;
+    top: -144px;
+
     border: 2px solid white;
-    border-radius: 50%;
     pointer-events: none;
 }
 
@@ -91,7 +197,6 @@ section {
     display: flex;
     justify-self: end;
 
-    border-radius: 50%;
     background-color: white;
     color: var(--color-key);
 }
@@ -105,21 +210,18 @@ section {
     line-height: inherit;
 }
 
-
 .title-list-header {
     font-size: 44px;
 }
 
-/* todo: вынести стили круга в общий класс */
 .big-circle {
     width: 280px;
     height: 280px;
 
     position: absolute;
-    right: -15%;
-    top: 25%;
+    right: -153px;
+    top: 144px;
 
-    border-radius: 50%;
     pointer-events: none;
     background-color: var(--color-key);
 }
@@ -150,4 +252,329 @@ section {
     left: 0;
 
     background-color: var(--color-light);
+}
+
+.slide-3 {
+    padding-right: 0;
+}
+
+.slide-3 .double-columns-wrapper h2 {
+    padding-left: 60px;
+}
+
+.slide-3 .double-columns-wrapper h2::before {
+    width: 1px;
+    height: 100vh;
+
+    position: absolute;
+    top: 0;
+    left: 550px;
+    content: '';
+    display: block;
+
+    background-color: var(--color-light);
+}
+
+.advantages-list li {
+    padding-right: 60px;
+    margin-bottom: 60px;
+}
+
+.advantages-list li::after {
+    width: 25px;
+    height: 50px;
+
+    position: relative;
+    top: -55px;
+    left: 430px;
+
+    display: block;
+    content: '';
+
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: var(--color-key);
+}
+
+.slide-4 {
+    padding: 40px 0 79px 0;
+}
+
+.slide-4 .double-columns-wrapper h2 {
+    width: 380px;
+
+    margin-left: 40px;
+
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.25;
+}
+
+.slide-4 .double-columns-wrapper h2::after {
+    width: 1px;
+    height: 2000px;
+
+    display: block;
+    position: absolute;
+    left: 400px;
+    bottom: 1px;
+    content: '';
+
+    background-color: var(--color-light);
+}
+
+.slide-4 .specialties-list {
+    padding-left: 80px;
+    align-self: flex-center;
+}
+
+.specialties-list li {
+    margin-bottom: 50px;
+    font-size: 22px;
+}
+
+.specialties-list li::before {
+    left: 437px;
+}
+
+.slide-5 {
+    padding: 0 0;
+}
+
+.slide-5 .grid-container {
+    height: 100%;
+
+    display: grid;
+    grid-template-areas:
+        "a1 a2 a3"
+        "a1 a4 a5";
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 0 0;
+}
+
+.slide-5 .a1 {
+    margin: auto;
+    grid-area: a1;
+}
+
+.slide-5 .grid-item h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.slide-5 .grid-item p {
+    font-size: 20px;
+}
+
+.slide-5 ul {
+    margin-left: 20px;
+
+    text-align: left;
+    font-size: 16px;
+}
+
+.slide-5 ul li {
+    margin-bottom: 10px;
+}
+
+.slide-6 {
+    padding: 110px 30px 140px 0;
+}
+
+.slide-6 .double-columns-wrapper h2 {
+    width: 560px;
+
+    margin-left: 40px;
+
+    font-size: 26px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.slide-6 .double-columns-wrapper h2::after {
+    width: 1px;
+    height: 2000px;
+
+    display: block;
+    position: absolute;
+    left: 540px;
+    bottom: 1px;
+    content: '';
+
+    background-color: var(--color-light);
+}
+
+.slide-6 .security-req-list {
+    align-self: flex-center;
+}
+
+.security-req-list li {
+    margin-bottom: 120px;
+    font-size: 20px;
+}
+
+.security-req-list li::before {
+    left: 576px;
+}
+
+.slide-7 {
+    padding: 0 0;
+}
+
+.slide-7 .grid-container {
+    height: 100%;
+
+    display: grid;
+    grid-template-areas:
+        ". . ."
+        ". . .";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 0 0;
+}
+
+.slide-7 .grid-item p span {
+    font-weight: bold;
+}
+
+.slide-7 .grid-item:nth-child(2) h3 {
+    margin-bottom: 52px;
+}
+
+.slide-8 {
+    padding: 40px 0 79px 0;
+}
+
+.slide-8 .double-columns-wrapper h2 {
+    text-align: center;
+    line-height: 1.25;
+}
+
+.slide-8 .double-columns-wrapper h2::before {
+    width: 70px;
+    height: 140px;
+
+    display: block;
+    position: absolute;
+    left: 0;
+    margin-top: -30px;
+    content: '';
+
+    border-bottom-right-radius: 140px;
+    border-top-right-radius: 140px;
+    background-color: var(--color-key);
+}
+
+.slide-8 .double-columns-wrapper h2::after {
+    width: 1px;
+    height: 2000px;
+
+    display: block;
+    position: absolute;
+    left: 470px;
+    bottom: 1px;
+    content: '';
+
+    background-color: var(--color-light);
+}
+
+.tech-specs-list {
+    width: 720px;
+}
+
+.tech-specs-list li {
+    margin-bottom: 18px;
+    padding-right: 40px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.slide-9 {
+    padding: 0 0 40px 0;
+}
+
+.slide-9 .double-columns-wrapper {
+    height: 320px;
+}
+
+.slide-9 h2 {
+    margin: 0 0 140px 120px;
+    display: inline;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 38px;
+}
+
+.slide-9 picture img {
+    width: 100%;
+    align-self: stretch;
+}
+
+.slide-10 {
+    padding: 79px 140px;
+}
+
+.slide-10 h2 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.slide-10 .double-columns-wrapper {
+    height: 320px;
+
+    justify-content: space-between;
+    align-content: center;
+}
+
+.slide-10 picture img {
+    width: 320px;
+    align-self: center;
+}
+
+.slide-11 {
+    padding: 79px 120px;
+}
+
+.slide-11 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide-11 .double-columns-wrapper {
+    height: 320px;
+
+    justify-content: space-between;
+    align-content: center;
+}
+
+.slide-11 picture img {
+    width: 330px;
+    align-self: center;
+}
+
+.slide-12 {
+    padding: 0 0 40px 0;
+}
+
+.slide-12 .double-columns-wrapper {
+    height: 320px;
+}
+
+.slide-12 h2 {
+    margin: 0 0 80px 120px;
+    display: inline;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    font-size: 28px;
+}
+
+.slide-12 picture img {
+    width: 100%;
+    align-self: stretch;
 }
