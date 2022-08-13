@@ -578,3 +578,11 @@ section {
     width: 100%;
     align-self: stretch;
 }
+
+.slide-14 img {
+    width: 340px;
+    height: 340px;
+
+    position: relative;
+    left: 244px;
+}
