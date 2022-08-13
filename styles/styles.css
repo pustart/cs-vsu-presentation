@@ -142,7 +142,7 @@ section {
     text-align: center;
 
     border-top: 1px solid var(--color-back);
-    border-right: 1px solid var(--color-back);
+    border-left: 1px solid var(--color-back);
 }
 
 .grid-item h3 {
@@ -434,6 +434,10 @@ section {
     grid-template-rows: 1fr 1fr;
     justify-items: center;
     gap: 0 0;
+}
+
+.slide-7 .grid-item {
+    width: 90%;
 }
 
 .slide-7 .grid-item p span {
